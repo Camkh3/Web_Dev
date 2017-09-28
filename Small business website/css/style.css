@@ -2,19 +2,22 @@
 
 /* Global Style */
 body{
-    background-color:turquoise;
+    background-color:wheat;
     margin:0;
     Padding:0;
 }
 
 div#container{
-    background-color:azure;
+    background-color:wheat;
     width:1024px;
     /*centers the container*/
     margin:auto;
 }
 
 header{
+    background-image:url(../images/plenty-of-pumpkins.jpg);
+    background-position:left;
+    background-size:cover;
     background-color:cornflowerblue;
     width:100%;
     height:150px;
@@ -22,6 +25,7 @@ header{
 }
 
 header h1{
+   
     text-align:center;
     padding-top:50px;
     color:floralwhite;
@@ -31,7 +35,7 @@ header h1{
 
 nav{
     width:100%;
-    background-color:aquamarine;
+    background-color:darkorange;
     clear:both;
     margin:0;
 }
@@ -49,16 +53,72 @@ nav ul li{
 
 nav ul li a{
     display:block;
-    color:blueviolet;
+    color:saddlebrown;
     text-align: center;
     text-decoration:none;
     padding:14px 20px;
 }
 
 nav ul li a:hover{
-    background-color:cyan;
+    background-color:red;
 }
 
 .active{
-    background-color:deeppink;
+    background-color:orangered;
+}
+
+footer{
+    width:100%;
+    background-color:;
+    color:;
+    text-align:center;
+    padding: 20px o;
+    float:left;
+    
+}
+
+.keepOpen{
+    clear:both;
+}
+
+/* index.html */
+
+img#main-img{
+    width:500px;
+    display:block;
+    margin:15px;
+    border:5px outset brown;
+    float:left;
+}
+
+h2#h2-home{
+    float:left;
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+p#p-home{
+    float:left;
+    width:45%;
+    margin-top:10px;
+}
+
+img#crazybob_img{
+    width:500px;
+    display:block;
+    margin:15px;
+    border:5px outset brown;
+    float:left;
+}
+
+h2#h2-about{
+    float:left;
+    margin-top:10px;
+    margin-bottom:0;
+}
+
+p#p-about{
+    float:left;
+    width:45%;
+    margin-top:10px;
 }
