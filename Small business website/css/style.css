@@ -5,6 +5,7 @@ body{
     background-color:wheat;
     margin:0;
     Padding:0;
+    font-family:sans-serif;
 }
 
 div#container{
@@ -131,7 +132,7 @@ p#p-about{
 
 div#gallery{
     width:100%;
-    border:3px outset orange;
+    border:3px outset #ffb100;
 }
 
 figure{
@@ -139,14 +140,14 @@ figure{
     float:left;
     background-color:lightyellow;
     box-shadow:2px 2px 10px #000;
-     background: linear-gradient(#ff7600, #845c2d);
+     background: linear-gradient(#ff7600, #ffc33d);
 }
 
 figure img{
     display:block;
     width:200px;
     margin: 18px auto; 
-    border: 1px solid #ad5f00;
+    border: 1px solid #000000;
 }
 
 figcaption{
@@ -157,7 +158,47 @@ figcaption{
     
 }
 
+/* Contact */
 
+form{
+    float:left;
+}
+
+h2#h2-contact{
+    margin-left:10px;
+    float:left;
+    clear:both;
+    width:100%;
+}
+
+form#form-contact{
+    margin-left:10px;
+    
+}
+
+form input, textarea{
+    margin-bottom: 10px;
+}
+
+button#button-contact{
+    width:100px;
+    height:40px;
+    font-weight:600;
+    margin-top:10px;
+    margin-bottom:15px;
+    box-shadow:1px 1px 1px black;
+}
+
+div#map{
+    float:right;
+    margin-top:0;
+    margin-right:20px;
+    
+}
+
+div#map h2{
+    margin-top:0;
+}
 
 
 
