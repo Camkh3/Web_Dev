@@ -2,7 +2,7 @@
 
 /* Global Style */
 body{
-    background-color:wheat;
+    background-color:darkgoldenrod;
     margin:0;
     Padding:0;
     font-family:sans-serif;
@@ -37,7 +37,7 @@ header h1{
 
 nav{
     width:100%;
-    background-color:darkorange;
+    background-color:orange;
     clear:both;
     margin:0;
     
@@ -57,24 +57,24 @@ nav ul li{
 
 nav ul li a{
     display:block;
-    color:saddlebrown;
+    color:black;
     text-align: center;
     text-decoration:none;
     padding:14px 20px;
 }
 
 nav ul li a:hover{
-    background-color:red;
+    background-color:#ffb87c;
 }
 
 .active{
-    background-color:orangered;
+    background-color:#ffcf75;
 }
 
 footer{
     width:100%;
     background-color:;
-    color:;
+    color:red;
     text-align:center;
     padding: 20px o;
     float:left;
@@ -133,6 +133,7 @@ p#p-about{
 div#gallery{
     width:100%;
     border:3px outset #ffb100;
+    border-left: 2px;
 }
 
 figure{
