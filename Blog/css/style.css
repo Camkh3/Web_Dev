@@ -1,0 +1,28 @@
+/*Style for Camran Avery's Blog website */
+
+/* Reset */
+html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li
+{
+    margin:0;
+    padding:0;
+}
+
+/* Universal Style */
+/*body */
+
+body{
+    background-color:black;
+}
+/* ID*/
+#container{
+    background-color:beige;
+    width:300px;
+}
+
+/*Class*/
+h1{
+    color:brown;
+}
+p{
+    color:darkblue;
+}
