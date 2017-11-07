@@ -22,12 +22,20 @@ div#container{
 }
 
 header#blogheader{
+    display:flex;
+    justify-content:center;
     width:100%;
     height:300px;
     font-family:sans-serif;
     text-align:center;
     background-color:#b7d3ff;
     
+}
+
+header h1{
+    align-self:center;
+    font-size: 3.5em;
+    font-family: 'Sancreek', cursive;
 }
 
 /* Blog Post */
@@ -48,4 +56,25 @@ img#post-img{
     height:150px;
     background-color:azure;
     margin:5px;
+}
+
+div#post-body{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    margin:0 5px; 
+}
+
+h2#post-title{
+    align-self:auto;
+    color:#2a88d9;
+}
+
+h5#post-stamp{
+    color:darkgray;
+}
+
+p#post-text{
+    font-size:1.15em;
+    color:blueviolet;
 }
