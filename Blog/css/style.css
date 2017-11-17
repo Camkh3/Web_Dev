@@ -43,7 +43,7 @@ div#blog-post{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    width:100%;
+    width:100%;;
     margin: 15px 0;
     padding: 10px;
     background-color:#9cffdd;
@@ -78,4 +78,15 @@ p#post-text{
     font-size:1.15em;
     color:blueviolet;
 }
+
+video#Somnus{
+    width:auto;
+}
+img#hyrule{
+    width:200px;
+    height:150px;
+}
+
+
+
 
