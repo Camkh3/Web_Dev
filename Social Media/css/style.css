@@ -34,6 +34,8 @@ div#container{
     max-width:1024px;
     width:80%;
     margin:auto;
+    background: rgb(213,205,235);
+
 }
 
 header{
@@ -84,16 +86,19 @@ nav{
 nav ul{
     list-style:none;
 }
-nav li{
-    
+nav li a:hover{
+    background-color:aliceblue;
 }
 nav li a{
+    display:block;
+    color:black;
     text-decoration:none;
     font-family:sans-serif;
     color:#000;
 }
 
 div#content div.post{
+    
     display:flex;
     flex-direction: row-reverse;
     flex-wrap:wrap;
@@ -102,6 +107,7 @@ div#content div.post{
     height: auto;
     background-color: #b4f1ff;
     box-shadow: 2px 2px 2px black;
+    
 }
 
 div#content{
@@ -126,6 +132,10 @@ div#content div.post-info{
     width:80%;
 }
 
+div#content div.post post-post{
+    order:3;
+}
+
 div#content div.post h3.pnp{
     order:1;
     width:60%;
@@ -143,16 +153,35 @@ div#content div.post p.time-stamp{
 div#content div.post div.post-foot{
     display:flex;
     order:3;
+    flex-wrap:wrap;
     flex-direction: column;
     width:100%;
 }
 
-div#content div.post div.post-foot h5.p-comments{
+div#content div.post div.post-foot div.p-comments{
+    display:flex;
+    order:1;
+    margin:6px;
+}
+/*comment title h5*/
+div#content div.post div.post-foot div.p-comments h5{
+    flex:1;
+    flex-wrap:wrap;
     order:1;
 }
-
-div#content div.post div.post-foot h5.p-likes{
+/*comment picture*/
+div#content div.post div.post-foot div.p-comments h5{
     order:2;
+}
+/*comment paragraph*/
+div#content div.post div.post-foot div.comment-p h5{
+    order:1;
+    margin:6px;
+}
+div#content div.post div.post-foot div.p-likes{
+    
+    order:2;
+    margin:6px;
 }
 
 footer{
@@ -160,5 +189,5 @@ footer{
     order:3;
     text-align:center;
     padding: 20px 0;
-    flex: auto;
+    flex:auto;
 }
