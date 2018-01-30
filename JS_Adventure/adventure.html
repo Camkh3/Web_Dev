@@ -11,6 +11,11 @@
             Story();
             
                 var inventory = {
+                    gold: 0,
+                    
+                }
+                
+                var player = {
                     
                 }
             
@@ -25,9 +30,17 @@
                     alert("You can feel throbbing pain in your head. You have no memory of what happened.");
                     alert("Questions start fludding your head. What happened? Where am I? You figure the only way to get answers is to get up and explore.");
                     alert("As you try to stand, you realise your left leg hurts immensely. You look and see your leg has a huge gash in it.");
-                    
+                    firstChoice();        
                 }
+                
+                function firstChoice(){
+                    var northSouth = prompt("Barely able to stand you look around at your surroundings. You are in a forest surrounded by huge trees. To the North you see a big boulder with some things laying next to it you quite can't make out yet. To the south is a winding path that seems to lead no where but you see smoke in that direction.").toLowerCase();
                     
+                        if (northSouth == "north" || northSouth == "go north"){
+                            var boulder = prompt("");
+                        }
+                }
+            
         </script>
     </body>
 </html>
