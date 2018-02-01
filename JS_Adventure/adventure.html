@@ -12,10 +12,14 @@
             
                 var inventory = {
                     gold: 0,
+                    walkingStick: 0,
+                    hpPotion: 0,
+                    
                     
                 }
                 
                 var player = {
+                    health: 100,
                     
                 }
             
@@ -30,15 +34,41 @@
                     alert("You can feel throbbing pain in your head. You have no memory of what happened.");
                     alert("Questions start fludding your head. What happened? Where am I? You figure the only way to get answers is to get up and explore.");
                     alert("As you try to stand, you realise your left leg hurts immensely. You look and see your leg has a huge gash in it.");
-                    firstChoice();        
+                    Forest();        
                 }
                 
-                function firstChoice(){
+                function Forest(){
                     var northSouth = prompt("Barely able to stand you look around at your surroundings. You are in a forest surrounded by huge trees. To the North you see a big boulder with some things laying next to it you quite can't make out yet. To the south is a winding path that seems to lead no where but you see smoke in that direction.").toLowerCase();
                     
                         if (northSouth == "north" || northSouth == "go north"){
-                            var boulder = prompt("");
+                           Clearing();
                         }
+                        
+                        else if(northSouth == "south" || northSouth == "go south"){
+                            Pathway();
+                        }
+                    
+                     function Clearing(){
+                                var boulder = prompt("You are at a clearing with a giant boulder in the middle. Next to the boulder you see two items that can be useful. There is a backpack, good for holding things, and a well carved walking stick leaning against the boulder.").toLowerCase();
+                                if (boulder == "take backpack"){
+                                    alert("You now have inventory space.");
+                                    Clearing();
+                                }
+                                
+                                else if(boulder == "take walking stick"){
+                                    inventory.walkingStick ++;
+                                    alert("You know have "+inventory.walkingStick+ " walking stick.");
+                                    Clearing();
+                                }
+                                
+                                else{
+                                    alert("I have the high ground.");
+                                    Clearing();
+                                }
+                            }
+                function Pathway(){
+                    var nsew = prompt("").toLowerCase;
+                    }
                 }
             
         </script>
