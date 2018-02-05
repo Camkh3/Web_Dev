@@ -7,8 +7,6 @@
         <h1> Adventure Game v0.1</h1>
         <p>By: Camran Avery</p>
         <script>
-            Start();  
-            Story();
             
                 var inventory = {
                     gold: 0,
@@ -22,6 +20,9 @@
                     health: 100,
                     
                 }
+                
+                Start();  
+                Story();
             
                 function Start(){
                     var playerName = prompt("Welcome adventurer to this daring world! In this land you will find many mysteries and surprises on your path! Before you begin your tale, allow me to ask you your name.");
@@ -45,11 +46,11 @@
                         }
                         
                         else if(northSouth == "south" || northSouth == "go south"){
-                            Pathway();
+                            windingDeath();
                         }
                     
                      function Clearing(){
-                                var boulder = prompt("You are at a clearing with a giant boulder in the middle. Next to the boulder you see two items that can be useful. There is a backpack, good for holding things, and a well carved walking stick leaning against the boulder.").toLowerCase();
+                                var boulder = prompt("You are at a clearing with a giant boulder in the middle. Next to the boulder you see two items that can be useful. There is a backpack, good for holding things, and a well carved walking stick leaning against the boulder. There is also the path forest area you started from to the south.").toLowerCase();
                                 if (boulder == "take backpack"){
                                     alert("You now have inventory space.");
                                     Clearing();
@@ -57,16 +58,32 @@
                                 
                                 else if(boulder == "take walking stick"){
                                     inventory.walkingStick ++;
-                                    alert("You know have "+inventory.walkingStick+ " walking stick.");
+                                    alert("You know have " +inventory.walkingStick+ " walking stick.");
                                     Clearing();
                                 }
                                 
+                                else if(boulder =="south" || boulder=="go south"){
+                                    afterForest();
+                                }
+                                
                                 else{
-                                    alert("I have the high ground.");
+                                    alert("I'm not sure what you mean. (p.s. 'I have the high ground')");
                                     Clearing();
                                 }
                             }
-                function Pathway(){
+                function afterForest(){
+                    var south = prompt("After aquiring some items that can prove useful, you head back the way you came. The only other path you can take is to the south towards the smoke.");
+                    
+                    if (south == "south" || south == "go south"){
+                        windingWays();
+                    }
+                function windingDeath(){
+                    alert("You arrive at the neverending pathways that wind all around. As you are trying to decide where to go, a thief jumps out from hiding to attack you.");
+                    
+                }
+                    
+                }
+                function windingWays(){
                     var nsew = prompt("").toLowerCase;
                     }
                 }
