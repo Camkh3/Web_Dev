@@ -14,6 +14,7 @@
                     hpPotion: 0,
                     
                     
+                    
                 }
                 
                 var player = {
@@ -45,7 +46,20 @@
                            Clearing();
                         }
                         
-                        else if(northSouth == "south" || northSouth == "go south"){
+                       function windingDeath(){
+                    alert("You arrive at the neverending pathways that wind all around. As you are looking around trying to decide where to go, a thief jumps out from hiding to attack you. Having nothing to defend yourself with and being injured, you are easily stabbed through the chest and killed.");
+                    var gameOver = prompt("GAME OVER \n Maybe you should try a new direction. \n Try Again?")
+                    
+                    if (gameOver == "start over" || gameOver == "yes" || gameOver == "y"){
+                        Start();
+                    }
+                    else if (gameOver == "no" || gameOver == "n"){
+                        alert("Feeling down that you died already huh? Kek kek kek.");
+                    }
+                    
+                }
+                    
+                        if (northSouth == "south" || northSouth == "go south"){
                             windingDeath();
                         }
                     
@@ -67,7 +81,7 @@
                                 }
                                 
                                 else{
-                                    alert("I'm not sure what you mean. (p.s. 'I have the high ground')");
+                                    alert("I'm not sure what you mean. (also 'I have the high ground')");
                                     Clearing();
                                 }
                             }
@@ -77,14 +91,14 @@
                     if (south == "south" || south == "go south"){
                         windingWays();
                     }
-                function windingDeath(){
-                    alert("You arrive at the neverending pathways that wind all around. As you are trying to decide where to go, a thief jumps out from hiding to attack you.");
-                    
-                }
+             
                     
                 }
                 function windingWays(){
-                    var nsew = prompt("").toLowerCase;
+                    alert("You arrive at Winding Ways, and open field with pathways go every which way. They wind all over the place, hence the name, and go over hills and seem to lead in the other three general directions. But before you could take a good look to get a grasp of your surroundings, a bandit appears from the cover of the forest, to steal your items. He doesn't know you have nothing in your backpack.");
+                    
+                    var bandit = prompt("The bandit approaches menacingly. He he pulls out a knife. \n 'Give me all you have and I will leave you be!' \n You try to tell him that you have nothing. The bandit doesn't believe you and moves closer. \n 'I am warning you!' ");
+                    
                     }
                 }
             
