@@ -9,7 +9,7 @@
         <script>
             
                 var inventory = {
-                    gold: 0,
+                    coins: 0,
                     walkingStick: 0,
                     hpPotion: 0,
                     
@@ -22,11 +22,15 @@
                     
                 }
                 
+                var invList = function(){
+                    alert("Coins = "+ inventory.coins +"\nWalking stick = "+inventory.walkingStick + "\n ");
+                }
+                
                 Start();  
                 Story();
             
                 function Start(){
-                    var playerName = prompt("Welcome adventurer to this daring world! In this land you will find many mysteries and surprises on your path! Before you begin your tale, allow me to ask you your name.");
+                    var playerName = prompt("Welcome adventurer to this daring world! In this land you will find many mysteries and thrills on your path! Before you begin your tale, allow me to ask you your name.");
                     
                     alert("Alright " +playerName+", your story begins now!.");
                 }
@@ -35,7 +39,7 @@
                     alert("You wake suddenly from a state of unconsciousness.");
                     alert("You can feel throbbing pain in your head. You have no memory of what happened.");
                     alert("Questions start fludding your head. What happened? Where am I? You figure the only way to get answers is to get up and explore.");
-                    alert("As you try to stand, you realise your left leg hurts immensely. You look and see your leg has a huge gash in it.");
+                    alert("As you try to stand, you realise your left leg hurts immensely. You look and see your leg has a huge gash in it. You need to find something for it quick.");
                     Forest();        
                 }
                 
@@ -44,6 +48,9 @@
                     
                         if (northSouth == "north" || northSouth == "go north"){
                            Clearing();
+                        }
+                        else{
+                            northSouth();
                         }
                         
                        function windingDeath(){
@@ -80,16 +87,25 @@
                                     afterForest();
                                 }
                                 
+                                else if(boulder == "inventory" || boulder == "check inventory" || boulder == "inv"){
+                                    invList();
+                                    Clearing();
+                                }
+                                
                                 else{
                                     alert("I'm not sure what you mean. (also 'I have the high ground')");
                                     Clearing();
                                 }
                             }
                 function afterForest(){
-                    var south = prompt("After aquiring some items that can prove useful, you head back the way you came. The only other path you can take is to the south towards the smoke.");
+                    var south = prompt("After aquiring some items that can prove useful, you head back the way you came.(you can check inventory at anytime) The only other path you can take is to the south towards the smoke.");
                     
                     if (south == "south" || south == "go south"){
                         windingWays();
+                    }
+                    else if(south == "inventory" || south == "check inventory" || south == "inv"){
+                            invList();
+                            afterForest();
                     }
              
                     
@@ -97,7 +113,18 @@
                 function windingWays(){
                     alert("You arrive at Winding Ways, and open field with pathways go every which way. They wind all over the place, hence the name, and go over hills and seem to lead in the other three general directions. But before you could take a good look to get a grasp of your surroundings, a bandit appears from the cover of the forest, to steal your items. He doesn't know you have nothing in your backpack.");
                     
-                    var bandit = prompt("The bandit approaches menacingly. He he pulls out a knife. \n 'Give me all you have and I will leave you be!' \n You try to tell him that you have nothing. The bandit doesn't believe you and moves closer. \n 'I am warning you!' ");
+                    var bandit = prompt("The bandit approaches menacingly. He he pulls out a knife. \n 'Give me all you have and I will leave you be!' \n You tell the bandit you have nothing and how the backpack is empty. \n 'I am warning you! You will be hurt!'\n He moves closer to you, almost withing in reach now. You try to think of your options. You can either fight the bandit, stick against knife. You can give in and give your bag, or you can pysch him out by giving him the bag then attacking. What do you do? ").toLowerCase();
+                    
+                        if (bandit == "attack with stick" || bandit == "attack with walking stick" && inventory.walkingStick >= 1){
+                            alert("As the bandit comes in to strike, your body almost moves on its own. You step to the side making the bandit miss his downward strike. Before the bandit is even done with his movement, you strike his right leg with your walking stick. Doing so put the bandit to one knee. The bandit turns on his knee to try to stab you again, but you are quick enough to block and knock the knife out of the bandits hand.");
+                            
+                            var banditChoice = prompt("The bandit looking surprised and on his knees plees to not be hurt. What a wuss, attacking but can't take it back. What do you do? Agree to his plee but ask for information of the area, or ignore him and knock the bandit unconscious.").toLowerCase();
+                            
+                            if (banditChoice = "agree" || banditChoice == "do not hurt"){
+                                alert("");
+                            }
+                            
+                        }
                     
                     }
                 }
