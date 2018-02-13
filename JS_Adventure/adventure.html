@@ -113,21 +113,44 @@
                 function windingWays(){
                     alert("You arrive at Winding Ways, and open field with pathways go every which way. They wind all over the place, hence the name, and go over hills and seem to lead in the other three general directions. But before you could take a good look to get a grasp of your surroundings, a bandit appears from the cover of the forest, to steal your items. He doesn't know you have nothing in your backpack.");
                     
-                    var bandit = prompt("The bandit approaches menacingly. He he pulls out a knife. \n 'Give me all you have and I will leave you be!' \n You tell the bandit you have nothing and how the backpack is empty. \n 'I am warning you! You will be hurt!'\n He moves closer to you, almost withing in reach now. You try to think of your options. You can either fight the bandit, stick against knife. You can give in and give your bag, or you can pysch him out by giving him the bag then attacking. What do you do? ").toLowerCase();
+                    var bandit = prompt("The bandit approaches menacingly. He he pulls out a knife. \n 'Give me all you have and I will leave you be!' \n You tell the bandit you have nothing and how the backpack is empty. \n 'I am warning you! You will be hurt!'\n He moves closer to you, almost withing in reach now. You try to think of your options. You can either fight the bandit, stick against knife. You can give in and give your bag, or you can go for option 3. What do you do? ").toLowerCase();
+                       
+                        if(bandit == "give backpack" || bandit == "give in" || bandit == "give up"){
+                           
+                                alert("You give in and give the bandit your things. He checks the back to see what you have, dissapointed. Not believeing you that you have nothing, the bandit presses for more. He just can't give it up. He inches forward and puts his knife to your throat. Annoyed with you he slits your throat and your lifeless body falls down.");
+                                var gameOver = prompt("GAME OVER \n If you do not have courage to fight a simple bandit, you are not fit for this world. You need to rethink your life. \n Try Again?")
                     
-                        if (bandit == "attack with stick" || bandit == "attack with walking stick" && inventory.walkingStick >= 1){
+                                if (gameOver == "start over" || gameOver == "yes" || gameOver == "y"){
+                                    Start();
+                                }
+                                else if (gameOver == "no" || gameOver == "n"){
+                                alert("Sad that you couldn't do it?.");
+                                }
+                                else{
+                                    alert("English much?");
+                                
+                                }
+                        }
+                          else if (bandit == "3rd option" || bandit == "option 3" || bandit == "third option" || bandit == "option three"){
+                              alert("");
+                          } 
+                           
+                          else if (bandit == "attack with stick" || bandit == "attack with walking stick" && inventory.walkingStick >= 1){
                             alert("As the bandit comes in to strike, your body almost moves on its own. You step to the side making the bandit miss his downward strike. Before the bandit is even done with his movement, you strike his right leg with your walking stick. Doing so put the bandit to one knee. The bandit turns on his knee to try to stab you again, but you are quick enough to block and knock the knife out of the bandits hand.");
                             
-                            var banditChoice = prompt("The bandit looking surprised and on his knees plees to not be hurt. What a wuss, attacking but can't take it back. What do you do? Agree to his plee but ask for information of the area, or ignore him and knock the bandit unconscious.").toLowerCase();
+                            var banditChoice = prompt("The bandit looking surprised and on his knees plees for mercy. What a wuss, attacking but can't take it back. What do you do? Agree to his plee but ask for information of the area, or ignore him and knock the bandit unconscious.").toLowerCase();
                             
                             if (banditChoice = "agree" || banditChoice == "do not hurt"){
                                 alert("");
                             }
                             
+                            
+                        }
+                            
                         }
                     
                     }
-                }
+                
             
         </script>
     </body>
