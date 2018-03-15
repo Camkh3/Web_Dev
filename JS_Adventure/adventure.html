@@ -30,7 +30,31 @@
                 
                 Start();  
                 Story();
-            
+//             function nani(){
+                           
+//                        }
+            function banditItems(){
+                                  var takeBandit = prompt("Laughing at how pathetic the plee is, you wack the bandit in the head with a powerful blow, rendering him unconscious. You see some dropped items the bandit has dropped. The knife, which you knocked out of his hands, and a little pack on him.").toLowerCase();
+                                    if(takeBandit == "inv" || takeBandit == "inventory"){
+                                        invList();
+                                        banditItems();
+                                    }
+                                     else if (takeBandit == "take knife" || takeBandit == "knife"){
+                                        alert("Picking the knife up from the ground, you notice how extremely sharp the knife is. Glad you didn't get cut right?");
+                                        inventory.knife++;
+                                        alert("You now have " +inventory.knife+ " knife.");
+                                        banditItems();
+                                    }
+                                    else if (takeBandit == "check bag" || takeBandit == "take bag" || takeBandit == "bag"){
+                                        var bagBandit = prompt("Checking the small bag the bandit has on him, you see it contains a folded piece of paper, a few berries, and some bandages.").toLowerCase();
+                                        if (bagBandit == "take all" || bagBandit == "take"){
+                                            inventory.bandages+=3;
+                                            inventory.map++;
+                                            inventory.berries+=5;
+                                            alert("WOOO SIMPLE ENDING WITH NO DEATHS BECAUSE BECAUSE I RAN OUT OF TIME. Broke the fourth wall I have.\n YOU WON.... SOMEHOW? TUNE IN NEXT WEEK ON DRAGON BALL Z TO SEE HOW THIS STORY ENDS.");
+                                        }
+                                    }
+                              }
                 function Start(){
                     var playerName = prompt("Welcome adventurer to this daring world! In this land you will find many mysteries and thrills on your path! Before you begin your tale, allow me to ask you your name.");
                     
@@ -120,7 +144,7 @@
                         if(bandit == "give backpack" || bandit == "give in" || bandit == "give up"){
                            
                                 alert("You give in and give the bandit your things. He checks the back to see what you have, dissapointed. Not believeing you that you have nothing, the bandit presses for more. He just can't give it up. He inches forward and puts his knife to your throat. Annoyed with you he slits your throat and your lifeless body falls down.");
-                                var gameOver = prompt("GAME OVER \n If you do not have courage to fight a simple bandit, you are not fit for this world. You need to rethink your life. \n Try Again?")
+                                var gameOver = prompt("GAME OVER \n If you do not have courage to fight a simple bandit, you are not fit for this world. You need to rethink your life. \n Try Again?").toLowerCase();
                     
                                 if (gameOver == "start over" || gameOver == "yes" || gameOver == "y"){
                                     Start();
@@ -128,24 +152,28 @@
                                 else if (gameOver == "no" || gameOver == "n"){
                                 alert("Sad that you couldn't do it?.");
                                 }
-                                else{
-                                    alert("English much?");
-                                
-                                }
-                        }
-                        function nani(){
-                            alert("You start yelling at the top of your lungs because as we all know from watching anime, yelling makes you stronger. You feel a surge of power and your hair turns gold and changes form, which we all know is a sign of power. You continue to yell until you recieve so much power, your hair is now super long(get it?) You now surpass all beings on earth. This is complete over kill for a bandit but you use your power anyways. You start charging you sterodypical ki blast(required time is usually at leat 10 seconds) You release your energy and destroy all on this random planet. Why? BECAUSE ANIME!");
-                        }
-                          else if (bandit == "3rd option" || bandit == "option 3" || bandit == "third option" || bandit == "option three"){
-                             nani();
+                            }
+                            else if (bandit == "3rd option" || bandit == "option 3" || bandit == "third option" || bandit == "option three"){
+                              alert("You start yelling at the top of your lungs because as we all know from watching anime, yelling makes you stronger. You feel a surge of power and your hair turns gold and changes form, which we all know is a sign of power. You continue to yell until you recieve so much power, your hair is now super long(get it?) You now surpass all beings on earth. This is complete over kill for a bandit but you use your power anyways. You start charging you sterodypical ki blast(required time is usually at leat 10 seconds) You release your energy and destroy all on this random planet. Why? BECAUSE ANIME!");
                           } 
-                            
-                            
-                           
-                          else if (bandit == "attack with stick" || bandit == "attack with walking stick" && inventory.walkingStick >= 1){
+                             else if (bandit == "attack with stick" || bandit == "attack with walking stick" && inventory.walkingStick >= 1){
                             alert("As the bandit comes in to strike, your body almost moves on its own. You step to the side making the bandit miss his downward strike. Before the bandit is even done with his movement, you strike his right leg with your walking stick. Doing so put the bandit to one knee. The bandit turns on his knee to try to stab you again, but you are quick enough to block and knock the knife out of the bandits hand.");
                             
                             var banditChoice = prompt("The bandit looking surprised and on his knees plees for mercy. What a wuss, attacking but can't take it back. What do you do? Agree to his plee but ask for information of the area, or ignore him and knock the bandit unconscious.").toLowerCase();
+                            
+                               
+                        }
+                            else{
+                                    alert("English much?");
+                                
+                                }
+                       
+                          
+                     
+                        
+                            
+                           
+                         
                             
                             if (banditChoice == "agree" || banditChoice == "do not hurt"){
                                 alert("You choose to show the bandit mercy, which you think is the right thing to do. You go to help the bandit get up, but as you reach for his hand, he takes a dagger hidden form you and plunges it deep into you. The bandit just laughs as he sees how simple you are.");
@@ -158,38 +186,15 @@
                                 else if (gameOver == "no" || gameOver == "n"){
                                 alert("Some hero.");
                                 }
-                                else{
-                                    alert("English much?");
-                                    Start();
                                 
-                                }
                             }
-                              function banditItems(){
-                                  var takeBandit = prompt("Laughing at how pathetic the plee is, you wack the bandit in the head with a powerful blow, rendering him unconscious. You see some dropped items the bandit has dropped. The knife, which you knocked out of his hands, and a little pack on him.").toLowerCase();
-                                    if(takeBandit == "inv" || takeBandit == "inventory"){
-                                        invList();
-                                        banditItems();
-                                    }
-                                     else if (takeBandit == "take knife" || takeBandit == "knife"){
-                                        alert("Picking the knife up from the ground, you notice how extremely sharp the knife is. Glad you didn't get cut right?");
-                                        inventory.knife++;
-                                        alert("You now have " +inventory.knife+ " knife.");
-                                        banditItems();
-                                    }
-                                    else if (takeBandit == "check bag" || takeBandit == "take bag" || takeBandit == "bag"){
-                                        var bagBandit = prompt("Checking the small bag the bandit has on him, you see it contains a folded piece of paper, a few berries, and some bandages.").toLowerCase();
-                                        if (bagBandit == "take all" || bagBandit == "take"){
-                                            inventory.bandages+=3;
-                                            inventory.map++;
-                                            inventory.berries+=5;
-                                            alert("WOOO SIMPLE ENDING WITH NO DEATHS BECAUSE BECAUSE I RAN OUT OF TIME. Broke the fourth wal I have.\n YOU WON.... SOMEHOW? TUNE IN NEXT WEEK ON DRAGON BALL Z TO SEE HOW THIS STORY ENDS.");
-                                        }
-                                    }
-                              }
-                              }
-                              else if(banditChoice == "deny" || banditChoice == "knock" || banditChoice == "hit"){
+                            
+                            else if(banditChoice == "deny" || banditChoice == "knock" || banditChoice == "hit"){
                                 banditItems();
                             }
+                              
+                              
+                              
                               else{
                                    var gameOver = prompt("GAME OVER \n I do good english but you do the not english good. \n Try Again?").toLowerCase();
                     
