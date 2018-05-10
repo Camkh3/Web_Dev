@@ -3,9 +3,11 @@ h1{
     font-size:50px; 
     text-align: center;
 }
+
 body{
     background-color:#ecfffd;
 }
+
 nav{
     width:100%;
     background-color:#10FFE8;
@@ -14,15 +16,18 @@ nav{
     font-family:fantasy;
     font-size: 20px;
 }
+
 nav ul{
     margin:0;
     padding:0;
     overflow:hidden;
     list-style: none;
 }
+
 nav ul li{
     float: left;
 }
+
 nav ul li a{
     display:block;
     color:black;
@@ -30,16 +35,20 @@ nav ul li a{
     text-decoration:none;
     padding:14px 16px;
 }
+
 nav ul li a:hover{
     background-color:#0cBFAE;
 }
+
 .active{
     background-color:#0cBFAE;
 }
+
 divcontainer button{
     width:100px;
     height:50px;
 }
+
 footer{
     width:100%;
     padding:20px;
@@ -47,12 +56,14 @@ footer{
     text-align: center;
     
 }
+
 div#container{
     padding: 16px;
 }
+
 .skillsImg{
-    width:250px;
-    
+    width:100%;
+    text-align:center; 
 }
 
 div#grid-container{
@@ -60,7 +71,7 @@ div#grid-container{
     grid-template-columns: auto auto auto;
     padding: 10px;
     text-align:center;
-    float:left;
+    
 }
 .grid-container h3{
     padding:1px;
@@ -68,7 +79,8 @@ div#grid-container{
     margin:0px;
 }
 .portImg{
-    width:90%;
+    width:100%;
+    max-width:500px;
     height:auto;
     padding:20px 10px;
     margin:5px;
@@ -81,26 +93,31 @@ div#container #mypic{
     display:block;
     margin:auto;
 }
+
 div#container p{
     text-align: center;
 }
+
 .input{
     width:363px;
     height:20px;
     margin-top: 0px;
     padding-top:0px;
 }
+
 .message{
     width: 400px;
     height: 150px;
     margin-top:0px;
     padding-top:0px;
 }
+
 div#container button{
     width:200px;
     height:50px;
     border-style: outset;
 }
+
 div#container button:hover{
     background-color: #0cBFAE;
     
@@ -114,9 +131,11 @@ div#container button:hover{
     font-family: 'Merriweather', serif;
     font-size:50px; 
 }
+    
 body{
     background-color:#ecfffd;
 }
+    
 nav{
     width:100%;
     background-color:#10FFE8;
@@ -125,6 +144,7 @@ nav{
     font-family:fantasy;
     font-size: 20px;
 }
+    
 nav ul{
     width: 100%;
     margin:0;
@@ -132,11 +152,13 @@ nav ul{
     overflow:hidden;
     list-style: none;
 }
+    
 nav ul li{
     float: none;
     border-style:solid;
     border-color:lightgray;
 }
+    
 nav ul li a{
     display:block;
     color:black;
@@ -144,21 +166,27 @@ nav ul li a{
     text-decoration:none;
     padding:14px 16px;
 }
+    
 nav ul li a:hover{
     background-color:#0cBFAE;
 }
+    
 .active{
     background-color:#0cBFAE;
 }
+    
 divcontainer button{
     width:100px;
     height:50px;
 }
+    
 footer{
     text-align: center;
 }
+    
 .skillsImg{
-    width:250px;
+    width:100%;
+    text-align:center;
 } 
         
 div#container #mypic{
@@ -186,19 +214,19 @@ div#container #mypic{
     margin-top: 0px;
     padding-top:0px;
 }
+    
 .message{
     width: 90%;
     height: 150px;
     margin-top:0px;
     padding-top:0px;
 }
+    
 div#container button{
     width:45%;
     height:50px;
     border-style: outset;
     align-content: center;
 }
- 
    
-    
 }
